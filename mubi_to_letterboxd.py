@@ -13,7 +13,7 @@ QUICK START
     Your user ID is the number at the end.
 3.  Get your MUBI Bearer token (see below).
 4.  Run:
-        python3 mubi_to_letterboxd.py --user-id 12345678 --token "Bearer eyJ..."
+        python3 mubi_to_letterboxd.py --user-id 12345678 --token "Bearer ..."
 
 HOW TO GET YOUR MUBI TOKEN
 ───────────────────────────
@@ -22,14 +22,14 @@ b. Open DevTools → Network tab  (Cmd+Option+I → Network).
 c. Reload the page, then filter requests by typing "wishes" or "api".
 d. Click any request to  mubi.com/services/api/…
 e. In the "Headers" panel find the "Authorization" request header.
-   It looks like:  Authorization: Bearer eyJhbGciOiJSUzI1Ni...
+   It looks like:  Authorization: Bearer ...
 f. Copy the full value including "Bearer ".
 
 TROUBLESHOOTING
 ───────────────
 If fewer films are returned than expected, run with --debug to see the raw
 API response and help identify the correct pagination fields:
-    python3 mubi_to_letterboxd.py --user-id 12345678 --token "Bearer eyJ..." --debug
+    python3 mubi_to_letterboxd.py --user-id 12345678 --token "Bearer ..." --debug
 ──────────────────────────────────────────────────────────────────────────────
 """
 
